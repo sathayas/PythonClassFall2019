@@ -11,6 +11,5 @@ plt.title('Sine function')
 plt.ylabel('sin(t)')
 plt.xlabel('Angle t (radian)')
 plt.axis([0,13,-2,2])
-plt.savefig('SinPlot.png', dpi=600)
+plt.savefig('SinPlot.png', dpi=300)
 plt.show()
-
