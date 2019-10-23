@@ -23,7 +23,7 @@ plt.ylabel('Scores')
 plt.title('Scores by groups')
 
 # formatting ticks for the x-axis
-plt.xticks(x+bar_width, ['1', '2', '3', '4', '5'])
+plt.xticks(x+bar_width, ['Patients', 'Controls', 'Parents', 'Siblings', 'Placebo'])
 
 # adding the legend
 plt.legend()
