@@ -34,6 +34,4 @@ plt.ylabel('tan(t)')
 plt.xlabel('Angle t (radian)')
 plt.axis([0,13,-1.1,1.1])
 
-# saving the plot
-plt.savefig('Subplots.png')
 plt.show()
