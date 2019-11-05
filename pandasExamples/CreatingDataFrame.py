@@ -18,6 +18,9 @@ cryoData['success'] = success
 
 
 
+import numpy as np
+import pandas as pd
+
 # Version 2
 # Or, using keys from infile
 infile = np.load('CryotherapyData.npz') # load the file object
