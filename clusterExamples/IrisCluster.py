@@ -1,4 +1,5 @@
 import numpy as np
+import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.cluster import KMeans
 from sklearn import datasets
@@ -15,28 +16,19 @@ nVar = X.shape[1]  # number of features
 
 
 
-# plotting the data
-plt.figure(figsize=[6, 6])
+# combining features as a dataframe
+featureData = pd.DataFrame(X, columns=varNames)
 
-# generating subplots
-y_set = list(set(y))
-c_points = ['b.','r.','g.']
-for iRow in range(nVar-1):  # subplot row index
-    for iCol in range(iRow+1, nVar):  # subplot column index
-        indPlot = (nVar-1)*iRow + iCol
-        plt.subplot(nVar-1, nVar-1, indPlot)
-        for iIris in y_set:
-            plt.plot(X[y==iIris,iCol], X[y==iIris,iRow],
-                     c_points[iIris], label=targetNames[iIris])
-        if iCol==iRow+1:
-            plt.xlabel(varNames[iCol])
-            plt.ylabel(varNames[iRow])
-        if iRow==(nVar-2) and iCol==(nVar-1):
-            plt.legend()
+# creating a list of colors
+yColor = []
+colorVector = 'rgb'
+for iClass in range(3):
+    yColor = yColor + ([colorVector[iClass]] * len(y[y==iClass]))
 
-# adjusting the space between subplots
-plt.subplots_adjust(wspace=0.35, hspace=0.35)
+# plotting the scatter plot matrix
+pd.plotting.scatter_matrix(featureData, figsize=[9,9], color=yColor)
 plt.show()
+
 
 
 
