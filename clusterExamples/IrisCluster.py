@@ -3,7 +3,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.cluster import KMeans
 from sklearn import datasets
-from sklearn.preprocessing import StandardScaler
 
 
 # Loading the iris data
