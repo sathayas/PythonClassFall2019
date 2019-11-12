@@ -51,7 +51,7 @@ plt.title('Clusters from K-means')
 
 # As a comparison, the true clusters
 plt.subplot(122)
-plt.scatter(X[:,3],X[:,0],c=y,marker='+')
+plt.scatter(X[:,3],X[:,0],c=yColor,marker='+')
 plt.xlabel('Petal width')
 plt.ylabel('Sepal length')
 plt.title('True clusters')
