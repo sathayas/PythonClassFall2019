@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from sklearn.cluster import KMeans
 
 # loadin the data
-wiscData = pd.read_csv(os.path.join('DataML','wiscsem.txt'), sep='\t')
+wiscData = pd.read_csv('wiscsem.txt', sep='\t')
 wiscFeatures = np.array(wiscData.iloc[:,2:13])
 featureNames = np.array(wiscData.columns[2:13])
 
