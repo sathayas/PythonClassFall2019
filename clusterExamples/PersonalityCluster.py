@@ -10,20 +10,10 @@ featureNames = pTraitData.columns  # list of features
 
 
 # determinging the number of clusters (up to 30 clusters)
-SSE = []
-nMaxClusters = 30
-for iClus in range(1,nMaxClusters+1):
-    # K-means clustering
-    km = KMeans(n_clusters=iClus)  # K-means with a given number of clusters
-    km.fit(pTraitData)  # fitting the personality data
-    SSE.append(km.inertia_) # recording the sum of square distances
-
-# plotting the sum of square distance
-plt.plot(np.arange(1,nMaxClusters+1),SSE,marker = "o")
-plt.xlabel('Number of clusters')
-plt.ylabel('Sum of sq distances')
-plt.show()
-
+#
+#  EXERCISE: GENERATE A SCREE PLOT AND DETERMINE THE NUMBER OF CLUSTERS
+#
+#
 
 # K-means clustering again
 # We will go with 3 clusters (btw is not the best solution)
