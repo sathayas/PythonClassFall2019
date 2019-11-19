@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from sklearn import datasets
 from sklearn.svm import SVC
+from sklearn.neighbors import KNeighborsClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import confusion_matrix, classification_report
 
@@ -13,7 +14,7 @@ X = digits.data    # the data, 1797 x 64 array
 digitsImages = digits.images  # image data, 1797 x 8 x 8
 y = digits.target # target information
 digitsFeatureNames = digits.target_names  # digits
-
+digitsString = [str(i) for i in digitsFeatureNames]
 
 # examples of the digits data
 plt.figure(figsize=(8,3))
@@ -31,7 +32,9 @@ plt.show()
 # spliting the data into training and testing data sets
 X_train, X_test, y_train, y_test = train_test_split(X, y,
                                                     test_size=.25,
-                                                    random_state=0)
+                                                    random_state=1)
 
 
-# Classifier
+# EXERCISE: SVM classifier
+
+# EXERCISE: KNN classifier
