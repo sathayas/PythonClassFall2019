@@ -19,7 +19,7 @@ plt.show()
 # extracting the features and labels
 X = np.array(CryoData.loc[:,['Age','Time','Area']])
 y = np.array(CryoData.Success)
-
+targetNames = ['Failure', 'Success']
 
 # Creating the training and testing data sets
 X_train, X_test, y_train, y_test = train_test_split(X, y,
