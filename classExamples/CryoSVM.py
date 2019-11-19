@@ -37,4 +37,4 @@ y_pred = sv.predict(X_test)
 print(confusion_matrix(y_test,y_pred))
 
 # classification report
-print(classification_report(y_test, y_pred))
+print(classification_report(y_test, y_pred, target_names=targetNames))
