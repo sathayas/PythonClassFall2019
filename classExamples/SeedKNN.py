@@ -20,3 +20,13 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=70,
 # EXERCISE: Define classifier object, train it, and predict
 
 # EXERCISE: Generate confusion matrix, classification report
+
+
+# kNN classifier, k=20 and weights=distance
+kNN = KNeighborsClassifier(20, weights='distance')
+kNN.fit(X_train,y_train)
+y_pred = kNN.predict(X_test)
+# classifier performance
+print(confusion_matrix(y_test,y_pred))
+print(classification_report(y_test, y_pred,
+                            target_names=target_names))
