@@ -17,12 +17,6 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=70,
                                                     random_state=1234)
 
 
+# EXERCISE: Define classifier object, train it, and predict
 
-# Predicted classes
-y_pred = kNN.predict(X_test)
-
-
-# classifier performance
-print(confusion_matrix(y_test,y_pred))
-print(classification_report(y_test, y_pred,
-                            target_names=target_names))
+# EXERCISE: Generate confusion matrix, classification report
